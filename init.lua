@@ -289,6 +289,9 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+-- Key to open Neorg
+
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
@@ -374,6 +377,8 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 
 -- jj for escape
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
+vim.keymap.set('n', '<leader>oi', '<cmd>edit ~/Dokumente/01_Org/index.org<CR>', {desc = "Org- Index"})
+
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 -- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
@@ -606,3 +611,8 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+--
+-- Addition for the concealement in Org- Mode
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = 'nc'
