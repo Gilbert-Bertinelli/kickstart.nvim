@@ -377,7 +377,9 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 
 -- jj for escape
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
-vim.keymap.set('n', '<leader>oi', '<cmd>edit ~/Dokumente/01_Org/index.org<CR>', {desc = "Org- Index"})
+vim.keymap.set("i", "jk", "<ESC>", { silent = true })
+
+vim.keymap.set('n', '<leader>oi', '<cmd>edit ~/Dokumente/10_EncFS/01_Org/index.org<CR>', {desc = "Org- Index"})
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
